@@ -1,0 +1,91 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Secrets & credentials ─────────────────────────────────────────────────────
+.api_key
+*.api_key
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+config.local.json
+
+# ── Remi runtime files ────────────────────────────────────────────────────────
+# These are machine-local and should not be shared
+.remi/
+remi_log.md
+remi_updates.md
+remi_memory.json
+codebase_map.json
+*.backup
+
+# ── Database files ────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+collab_agent.db
+
+# ── macOS system files ────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+
+# ── launchd plists (machine-specific) ────────────────────────────────────────
+*.plist
+
+# ── IDE & editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.cursor/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+daemon.log
+logs/
+
+# ── Archives & deliverables ───────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.rar
+Deliverable*.zip
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/

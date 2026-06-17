@@ -1,3 +1,16 @@
+"""
+Remi — Conflict Resolution Agent
+
+Core AI layer. Receives two developers' code changes and their stated intents,
+analyzes for semantic conflicts, and produces a merged resolution using Claude Opus 4.6.
+
+Also handles:
+- Intent inference via Claude Haiku 4.5 (called on every file save)
+- Intent registry sync with the server
+- Cross-file risk flag generation
+- Learned pattern accumulation across merges
+"""
+
 import os
 import json
 import requests
@@ -56,7 +69,7 @@ def infer_intent(file_path: str, content: str) -> str:
             messages=[{
                 "role": "user",
                 "content": (
-                    f"In one concise sentence, describe what this file does.\n\n"
+                    f"In one concise sentence, describe the primary purpose of this file and what it is responsible for in the codebase.\n\n"
                     f"File: {file_path}\n\n{content[:3000]}"
                 )
             }]
@@ -152,7 +165,7 @@ Code:
 {dev_b['code']}"""
 
     response = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-opus-4-6",
         max_tokens=4096,
         system=system_prompt,
         messages=[{"role": "user", "content": user_message}]

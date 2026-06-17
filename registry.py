@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
-registry.py — Show the full intent map for the Remi project.
+registry.py — Standalone intent registry viewer (legacy).
+
+Note: This script's functionality is now available via `remi registry` in the CLI.
+This file is kept for reference and backwards compatibility.
+
 Run: python3 registry.py
 """
 
