@@ -1,5 +1,9 @@
 # Remi
 
+<p align="center">
+  <img src="assets/remi-logo.png" alt="Remi" width="400"/>
+</p>
+
 **Pre-push, intent-aware conflict detection for teams using AI-assisted development.**
 
 > *Git resolves conflicts after a push — at the syntax level. Remi resolves them before a push — at the intent level.*
